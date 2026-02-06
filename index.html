@@ -3,213 +3,82 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Premium Web Studio</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-
+<title>HA Web Solutions</title>
 <style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:'Poppins',sans-serif;
-  transition:0.3s;
-}
-
 body{
-  min-height:100vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  padding:20px;
-  background: linear-gradient(135deg,#667eea,#764ba2);
+    margin:0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    color:white;
+    text-align:center;
 }
-
-body.dark{
-  background: linear-gradient(135deg,#1e1e1e,#000000);
-}
-
-.loader{
-  position:fixed;
-  width:100%;
-  height:100%;
-  background:#111;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  z-index:1000;
-}
-
-.loader span{
-  width:50px;
-  height:50px;
-  border:5px solid #fff;
-  border-top:5px solid transparent;
-  border-radius:50%;
-  animation:spin 1s linear infinite;
-}
-
-@keyframes spin{
-  100%{transform:rotate(360deg);}
-}
-
 .container{
-  background: rgba(255,255,255,0.15);
-  backdrop-filter: blur(15px);
-  border-radius:20px;
-  padding:40px;
-  width:100%;
-  max-width:450px;
-  box-shadow:0 20px 40px rgba(0,0,0,0.3);
-  text-align:center;
-  color:white;
+    padding:60px 20px;
 }
-
-body.dark .container{
-  background: rgba(0,0,0,0.4);
-}
-
 h1{
-  font-weight:700;
-  margin-bottom:10px;
+    font-size:32px;
 }
-
 p{
-  font-size:14px;
-  margin-bottom:25px;
-  opacity:0.9;
+    font-size:18px;
+    opacity:0.9;
 }
-
-input{
-  width:100%;
-  padding:14px;
-  margin:10px 0;
-  border:none;
-  border-radius:12px;
-  outline:none;
-  font-size:14px;
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 25px;
+    background:#00c6ff;
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:bold;
 }
-
-button{
-  width:100%;
-  padding:14px;
-  margin-top:10px;
-  border:none;
-  border-radius:12px;
-  font-size:16px;
-  font-weight:600;
-  cursor:pointer;
-  background: linear-gradient(90deg,#ff512f,#dd2476);
-  color:white;
+.services{
+    margin-top:50px;
 }
-
-button:hover{
-  transform:scale(1.05);
+.service-box{
+    background:white;
+    color:black;
+    margin:15px;
+    padding:20px;
+    border-radius:15px;
 }
-
-.toggle{
-  position:absolute;
-  top:20px;
-  right:20px;
-  cursor:pointer;
-  background:white;
-  color:black;
-  padding:8px 15px;
-  border-radius:20px;
-  font-size:12px;
-}
-
-body.dark .toggle{
-  background:black;
-  color:white;
-}
-
-.success{
-  margin-top:15px;
-  color:#00ffae;
-  font-weight:500;
-}
-
-.about{
-  margin-top:30px;
-  font-size:13px;
-  opacity:0.9;
+footer{
+    margin-top:50px;
+    padding:20px;
+    background:#111;
 }
 </style>
 </head>
-
 <body>
 
-<div class="loader" id="loader">
-  <span></span>
-</div>
-
-<div class="toggle" onclick="toggleMode()">🌙 Mode</div>
-
 <div class="container">
-  <h1>Premium Web Studio</h1>
-  <p>Biz website va Telegram bot yaratamiz</p>
+    <h1>Biznesingizga zamonaviy web sayt kerakmi? 🚀</h1>
+    <p>24 soatda tayyor • Responsive • Professional dizayn</p>
+    <a href="https://t.me/HAWebSolutions" class="btn">Bog‘lanish</a>
 
-  <input type="text" id="name" placeholder="Ismingiz">
-  <input type="text" id="phone" placeholder="Telefon raqamingiz">
+    <div class="services">
+        <h2>Xizmatlarimiz</h2>
 
-  <button onclick="sendMessage()">Operator bilan aloqa</button>
+        <div class="service-box">
+            <h3>Landing Page</h3>
+            <p>Sotuvga ishlaydigan 1 sahifali sayt</p>
+        </div>
 
-  <div id="result" class="success"></div>
+        <div class="service-box">
+            <h3>Biznes Sayt</h3>
+            <p>Kompaniya uchun to‘liq web sayt</p>
+        </div>
 
-  <div class="about">
-    <h3>Biz kimmiz?</h3>
-    <p>
-      Biz zamonaviy web dasturchilar jamoasimiz.
-      Landing page, biznes sayt, mini web ilova,
-      Telegram bot va premium dizayn qilamiz.
-      Tez, sifatli va mobilga mos ishlaymiz.
-    </p>
-  </div>
+        <div class="service-box">
+            <h3>Telegram Bot</h3>
+            <p>Buyurtma va avtomatlashtirish tizimi</p>
+        </div>
+    </div>
 </div>
 
-<script>
-window.onload=function(){
-  setTimeout(function(){
-    document.getElementById("loader").style.display="none";
-  },1000);
-}
-
-function toggleMode(){
-  document.body.classList.toggle("dark");
-}
-
-function sendMessage(){
-
-  var name=document.getElementById("name").value;
-  var phone=document.getElementById("phone").value;
-
-  if(name===""||phone===""){
-    alert("Formani to‘ldiring!");
-    return;
-  }
-
-  var botToken="8590995846:AAFGNk4k16sjJz9K1oBKJyu3WVgmXb43b2U";
-  var chatId="8242226365";
-
-  var text="🔥 YANGI MIJOZ!\n\n👤 Ism: "+name+"\n📞 Telefon: "+phone;
-
-  fetch("https://api.telegram.org/bot"+botToken+"/sendMessage",{
-    method:"POST",
-    headers:{
-      "Content-Type":"application/json"
-    },
-    body:JSON.stringify({
-      chat_id:chatId,
-      text:text
-    })
-  });
-
-  document.getElementById("result").innerText="✅ Yuborildi! Tez orada bog‘lanamiz.";
-  document.getElementById("name").value="";
-  document.getElementById("phone").value="";
-}
-</script>
+<footer>
+    HA Web Solutions © 2026
+</footer>
 
 </body>
 </html>
