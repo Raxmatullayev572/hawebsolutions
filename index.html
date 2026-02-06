@@ -4,80 +4,156 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>HA Web Solutions</title>
+
 <style>
 body{
-    margin:0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
-    color:white;
-    text-align:center;
+margin:0;
+font-family:Arial, sans-serif;
+background:#0f172a;
+color:white;
 }
-.container{
-    padding:60px 20px;
+
+header{
+background:linear-gradient(135deg,#2563eb,#1e3a8a);
+padding:100px 20px;
+text-align:center;
 }
-h1{
-    font-size:32px;
+
+header h1{
+font-size:42px;
+margin-bottom:15px;
 }
-p{
-    font-size:18px;
-    opacity:0.9;
+
+header p{
+font-size:18px;
+opacity:0.9;
 }
+
 .btn{
-    display:inline-block;
-    margin-top:20px;
-    padding:12px 25px;
-    background:#00c6ff;
-    color:white;
-    text-decoration:none;
-    border-radius:30px;
-    font-weight:bold;
+display:inline-block;
+margin-top:20px;
+padding:12px 30px;
+background:white;
+color:#0f172a;
+text-decoration:none;
+border-radius:30px;
+font-weight:bold;
 }
-.services{
-    margin-top:50px;
+
+section{
+padding:70px 20px;
+text-align:center;
 }
-.service-box{
-    background:white;
-    color:black;
-    margin:15px;
-    padding:20px;
-    border-radius:15px;
+
+.container{
+max-width:1100px;
+margin:auto;
 }
+
+.cards{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.card{
+background:#1e293b;
+margin:15px;
+padding:25px;
+border-radius:12px;
+width:280px;
+}
+
+.price-box{
+background:#1e293b;
+margin:15px;
+padding:30px;
+border-radius:12px;
+width:260px;
+display:inline-block;
+}
+
+.price{
+font-size:26px;
+color:#38bdf8;
+margin:10px 0;
+}
+
 footer{
-    margin-top:50px;
-    padding:20px;
-    background:#111;
+background:#020617;
+padding:20px;
+text-align:center;
+font-size:14px;
 }
+
 </style>
 </head>
 <body>
 
-<div class="container">
-    <h1>Biznesingizga zamonaviy web sayt kerakmi? 🚀</h1>
-    <p>24 soatda tayyor • Responsive • Professional dizayn</p>
-    <a href="https://t.me/HAWebSolutions" class="btn">Bog‘lanish</a>
+<header>
+<h1>HA Web Solutions</h1>
+<p>Zamonaviy web saytlar va Telegram botlar</p>
+<a href="https://t.me/Hoji_2007" class="btn">Bog‘lanish</a>
+</header>
 
-    <div class="services">
-        <h2>Xizmatlarimiz</h2>
+<section>
+<h2>Biz haqimizda</h2>
+<p>Biz kichik va o‘rta bizneslar uchun zamonaviy, tezkor va responsive web platformalar yaratamiz.</p>
+</section>
 
-        <div class="service-box">
-            <h3>Landing Page</h3>
-            <p>Sotuvga ishlaydigan 1 sahifali sayt</p>
-        </div>
+<section>
+<h2>Xizmatlarimiz</h2>
+<div class="cards">
 
-        <div class="service-box">
-            <h3>Biznes Sayt</h3>
-            <p>Kompaniya uchun to‘liq web sayt</p>
-        </div>
-
-        <div class="service-box">
-            <h3>Telegram Bot</h3>
-            <p>Buyurtma va avtomatlashtirish tizimi</p>
-        </div>
-    </div>
+<div class="card">
+<h3>Landing Page</h3>
+<p>Sotuvga ishlaydigan 1 sahifali sayt</p>
 </div>
 
+<div class="card">
+<h3>Biznes Sayt</h3>
+<p>Korporativ va ko‘p sahifali saytlar</p>
+</div>
+
+<div class="card">
+<h3>Telegram Bot</h3>
+<p>Buyurtma va avtomatlashtirish tizimi</p>
+</div>
+
+</div>
+</section>
+
+<section>
+<h2>Narx paketlar</h2>
+
+<div class="price-box">
+<h3>Start</h3>
+<div class="price">500 000 so‘m</div>
+<p>Landing Page</p>
+</div>
+
+<div class="price-box">
+<h3>Business</h3>
+<div class="price">1 000 000 so‘m</div>
+<p>3-5 sahifali sayt</p>
+</div>
+
+<div class="price-box">
+<h3>Premium</h3>
+<div class="price">2 000 000 so‘m</div>
+<p>To‘liq loyiha + Bot</p>
+</div>
+
+</section>
+
+<section>
+<h2>Aloqa</h2>
+<p>Buyurtma berish uchun Telegram orqali yozing</p>
+<a href="https://t.me/Hoji_2007" class="btn">Telegramga yozish</a>
+</section>
+
 <footer>
-    HA Web Solutions © 2026
+© 2026 HA Web Solutions
 </footer>
 
 </body>
